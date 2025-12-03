@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار الاستماع - الحفلة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎧 اختبار استماع - Party Time</h1>
+        <p>الرجاء إدخال بياناتك لبدء الاختبار.</p>
+    </header>
+
+    <div id="setup-form" class="card">
+        <h2>بيانات الطالب</h2>
+        <form id="student-info-form">
+            <label for="student-name">الاسم:</label>
+            <input type="text" id="student-name" required>
+
+            <label for="student-section">الشعبة/الصف:</label>
+            <input type="text" id="student-section" required>
+
+            <button type="submit" id="start-test-btn">بدء الاختبار</button>
+        </form>
+    </div>
+
+    <div id="test-container" class="hidden">
+        <div class="test-header-info">
+            <span id="display-name"></span> | <span id="display-section"></span>
+            <div id="timer">الزمن المتبقي: <span>00:00</span></div>
+        </div>
+
+        <hr>
+
+        <h2>مقطع الاستماع</h2>
+        <audio controls id="listening-audio">
+            <source src="1- Party Time - Randall's ESL Cyber Listening Lab (1).mp3" type="audio/mpeg">
+            متصفحك لا يدعم عنصر الصوت.
+        </audio>
+
+        <form id="quiz-form">
+            
+            <div class="question-block" data-question-id="1">
+                <h3>السؤال 1: من الشخص الذي تم تقديمه لديف؟</h3>
+                <label>
+                    <input type="radio" name="q1" value="A" required> أ. سارة، أخت المضيفة
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="B"> ب. كارول، أخت المضيفة
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="C"> ج. بوب، معلم الكاراتيه
+                </label>
+            </div>
+
+            <div class="question-block" data-question-id="2">
+                <h3>السؤال 2: ما هو وصف المرأة التي تجلس على الأريكة؟</h3>
+                <label>
+                    <input type="radio" name="q2" value="A" required> أ. ترتدي فستان أزرق وشعرها قصير
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="B"> ب. ترتدي سترة حمراء وشعرها أسود طويل
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="C"> ج. ترتدي قميص أخضر
+                </label>
+            </div>
+            <button type="submit" id="finish-test-btn">إنهاء الاختبار وإرسال النتائج</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 اختبارات الاستماع الاحترافية</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
